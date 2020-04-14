@@ -17,12 +17,13 @@ public class PlusPlus {
 		
 		int[][] matrix = new int[rows][columns];
 		
-		List<Integer> matrixElements = new ArrayList<Integer>();
 		for (int i = 0; i < rows; i ++) {
 			List<String> rowList = new ArrayList<String>(Arrays.asList(sc.nextLine().split("\\s")));
-			matrixElements.addAll(rowList);
+			for(int k = 0; k < rowList.size(); k ++) {
+				matrix[i][k] = Integer.parseInt(rowList.get(k));
+			}
 		}
-
+		System.out.println("Done");
 	}
 
 }
